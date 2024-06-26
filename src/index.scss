@@ -1,0 +1,99 @@
+// index.scss
+
+// Importa Bootstrap
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+// Aquí puedes agregar tus propios estilos personalizados
+// por ejemplo:
+
+.custom-navbar {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  h4 {
+    font-family: "Dancing Script", cursive;
+    font-size: 30px;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    font-weight: bold;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: repeating-linear-gradient(to right, #4facfe, #00fe87);
+  }
+}
+
+.nav-item {
+  margin-right: 15px;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none; /* Quitar subrayado del enlace */
+  position: relative;
+  transition: color 0.3s ease;
+
+  &:hover {
+    /* Borde con degradado */
+    border: 2px solid transparent; /* Asegura que el borde inicial sea transparente */
+    border-image: repeating-linear-gradient(to right, #4facfe, #00fe87);
+    border-image-slice: 1;
+    border-radius: 15px;
+
+    /* Aplicar el degradado al texto */
+    color: transparent !important;
+    -webkit-background-clip: text;
+    background-clip: text, border-box;
+    background-image: repeating-linear-gradient(to right, #4facfe, #00fe87);
+    font-weight: bold; /* Estilo adicional cuando el enlace está activo */
+  }
+
+  &.active {
+    /* Borde con degradado */
+    border: 2px solid transparent; /* Asegura que el borde inicial sea transparente */
+    border-image: repeating-linear-gradient(to right, #4facfe, #00fe87);
+    border-image-slice: 1;
+    border-radius: 15px;
+
+    /* Aplicar el degradado al texto */
+    color: transparent !important;
+    -webkit-background-clip: text;
+    background-clip: text, border-box;
+    background-image: repeating-linear-gradient(to right, #4facfe, #00fe87);
+    font-weight: bold; /* Estilo adicional cuando el enlace está activo */
+
+    /* Puedes agregar más estilos específicos para el estado activo si es necesario */
+  }
+}
+
+.mini-banner {
+  background-color: black;
+  color: white;
+  justify-content: center;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.banner-text-container {
+  display: inline-block; /* Alinear el texto en línea */
+  white-space: nowrap; /* Evitar que el texto se desplace a la siguiente línea */
+}
+
+.animated-text {
+  margin-right: 20px; /* Espacio entre repeticiones del texto */
+  animation: scrollText 15s linear infinite; /* Animación de desplazamiento continuo */
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
