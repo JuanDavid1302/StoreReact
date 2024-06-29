@@ -132,3 +132,18 @@
   height: 100%;
   object-fit: cover; /* Ajustar la imagen para cubrir completamente el área */
 }
+
+.custom-filters {
+  list-style-type: none;
+}
+
+.customCard-body {
+  padding: 10px;
+  height: 170px !important;
+  overflow: auto;
+}
+
+.container-filters {
+  border-right: solid rgb(157, 157, 157);
+  height: 100%;
+}
