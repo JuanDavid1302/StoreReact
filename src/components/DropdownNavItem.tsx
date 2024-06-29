@@ -2,9 +2,10 @@ import React, { useState } from "react";
 
 interface DropdownNavItemProps {
   title: string;
+  href: string;
 }
 
-const DropdownNavItem: React.FC<DropdownNavItemProps> = ({ title }) => {
+const DropdownNavItem: React.FC<DropdownNavItemProps> = ({ title, href }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleMouseEnter = () => {
@@ -23,7 +24,7 @@ const DropdownNavItem: React.FC<DropdownNavItemProps> = ({ title }) => {
     >
       <a
         className="nav-link dropdown-toggle"
-        href="#"
+        href={href}
         role="button"
         aria-expanded={isOpen ? "true" : "false"}
       >

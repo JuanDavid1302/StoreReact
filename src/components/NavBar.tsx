@@ -4,7 +4,7 @@ import SearchForm from "./SearchForm";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg custom-navbar">
+    <nav className="navbar navbar-expand-lg custom-navbar fixed-top">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           <h4 className="mx-2">STORE</h4>
@@ -22,12 +22,16 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <NavItem title="Inicio" link="#" isActive={true} />
-            <DropdownNavItem title="Hombre" />
-            <DropdownNavItem title="Mujer" />
-            <DropdownNavItem title="Niños" />
-            <DropdownNavItem title="Niñas" />
-            <NavItem title="Contactanos" link="#" isDisabled={true} />
+            <NavItem title="Inicio" link="/" isActive={true} />
+            <DropdownNavItem title="Hombre" href="/hombre" />
+            <DropdownNavItem title="Mujer" href="/mujer" />
+            <DropdownNavItem title="Niños" href="/ninos" />
+            <DropdownNavItem title="Niñas" href="/ninas" />
+            <NavItem
+              title="Contactanos"
+              link="/contactanos"
+              isDisabled={true}
+            />
           </ul>
           <SearchForm />
         </div>
