@@ -8,6 +8,7 @@ import Mujer from "./components/Mujer";
 import Nino from "./components/Nino";
 import Nina from "./components/Nina";
 import Contactanos from "./components/Contactanos";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/ninas" element={<Nina />} />
           <Route path="/contactanos" element={<Contactanos />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

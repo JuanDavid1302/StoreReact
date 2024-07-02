@@ -13,28 +13,52 @@ const Hombre = () => {
   ];
 
   const checkboxesTa = [
-    { id: "flexCheck3", label: "XXL" },
-    { id: "flexCheck4", label: "XL" },
-    { id: "flexCheck4", label: "L" },
-    { id: "flexCheck4", label: "M" },
-    { id: "flexCheck4", label: "S" },
-    { id: "flexCheck4", label: "XS" },
+    { id: "flexCheck7", label: "XXL" },
+    { id: "flexCheck8", label: "XL" },
+    { id: "flexCheck9", label: "L" },
+    { id: "flexCheck10", label: "M" },
+    { id: "flexCheck11", label: "S" },
+    { id: "flexCheck12", label: "XS" },
     // Agrega más checkboxes si es necesario
   ];
 
   const checkboxesPre = [
-    { id: "flexCheck5", label: "Precio: más bajo primero" },
-    { id: "flexCheck6", label: "Precio: más alto primero" },
+    { id: "flexCheck13", label: "Precio: más bajo primero" },
+    { id: "flexCheck14", label: "Precio: más alto primero" },
     // Agrega más checkboxes si es necesario
   ];
 
   const Products = [
-    { title: "Camisa de Cuadros", img: "./images/imgpro.png" },
-    { title: "Chaqueta de Cuero", img: "./images/imgpro.png" },
-    { title: "Pantalones Vaqueros", img: "./images/imgpro.png" },
-    { title: "Pantalones Vaqueros", img: "./images/imgpro.png" },
-    { title: "Pantalones Vaqueros", img: "./images/imgpro.png" },
-    { title: "Pantalones Vaqueros", img: "./images/imgpro.png" },
+    {
+      title: "Camisa de Cuadros",
+      img: "./images/imgpro.png",
+      price: "$100.000",
+    },
+    {
+      title: "Chaqueta de Cuero",
+      img: "./images/imgpro.png",
+      price: "$120.000",
+    },
+    {
+      title: "Pantalones Vaqueros",
+      img: "./images/imgpro.png",
+      price: "$200.000",
+    },
+    {
+      title: "Pantalones Vaqueros",
+      img: "./images/imgpro.png",
+      price: "$110.000",
+    },
+    {
+      title: "Pantalones Vaqueros",
+      img: "./images/imgpro.png",
+      price: "$90.000",
+    },
+    {
+      title: "Pantalones Vaqueros",
+      img: "./images/imgpro.png",
+      price: "$40.000",
+    },
   ];
 
   return (
@@ -54,7 +78,7 @@ const Hombre = () => {
       <div className="container-fluid"></div>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-lg-2 col-md-2 col-sm-0 container-filters">
+          <div className="col-lg-2 col-md-3 col-sm-0 container-filters">
             <Collapse
               name="Categoria"
               checkboxes={checkboxesCat}
@@ -71,14 +95,20 @@ const Hombre = () => {
               idCollapse="CollapsePre"
             />
           </div>
-          <div className="col-lg-10 col-md-10 col-sm-12">
+          <div className="col-lg-10 col-md-9 col-sm-12">
             <div className="row">
               {Products.map((Product, index) => (
-                <div key={index} className="col-lg-4 col-md-9 col-sm-12">
-                  <CardProduct
-                    title={Product.title}
-                    img={Product.img}
-                  ></CardProduct>
+                <div
+                  key={index}
+                  className="col-lg-3 col-md-6 col-sm-12 mb-3 d-flex justify-content-center"
+                >
+                  <a href={`#/product/${index}`} className="card-link">
+                    <CardProduct
+                      title={Product.title}
+                      img={Product.img}
+                      price={Product.price}
+                    />
+                  </a>
                 </div>
               ))}
             </div>
